@@ -13,8 +13,20 @@
 }
 
 html {
-  font-size: 62.5%; /* 10px, because the default font size of html element is 16px */
+  font-size: 62.5%;
+  /* 10px, because the default font size of html element is 16px */
 }
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+
 /* End of Common styles */
 
 /* Section-1 */
@@ -28,25 +40,109 @@ html {
   align-items: center;
 }
 
-.section-heading {
-    font-size: 12rem;
-    font-weight: 900;
-    color: #fff;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 0.5rem;
-    text-shadow: 0.3rem 0.3rem 0.3rem #000;
-}
-
 .section-1-icons i {
-    font-size: 35rem;
-    color: #a79a2d;
-    position: absolute;
-    transform: translate(-50%, -50%) scale(0);
-    text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  font-size: 35rem;
+  color: #a79a2d;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: transform 0.35s;
 }
 
 .section-1-icons i.change {
   transform: translate(-50%, -50%) scale(1);
 }
+
 /* End of Section-1 */
+
+
+/* Section-2 */
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 30rem;
+  background-color: #a79a2d;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem #000;
+  position: relative;
+  transform: rotateY(20deg) skewX(-2deg);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card::before {
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: #817824;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #8f8317;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card:hover{
+  transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-name{
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #111;
+  margin: 2rem 0;
+  text-shadow: 0.15rem 0.15rem 0.15rem #111;
+}
+
+.card-btn {
+  width: 70%;
+  background-color: #111;
+  color: #888;
+  border-radius: 5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  border: none;
+  padding: .5rem;
+  cursor: pointer;
+  box-shadow: -0.2rem -0.2rem 0.2rem #000;
+}
+
+/* End of Section-2 */
